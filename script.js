@@ -8,7 +8,7 @@ const checkValidNumber = (input) => {
     alert("Please provide a phone number");
     return;
   }
-  const countryCode = "^(1\\s)?";
+  const countryCode = "^(1\\s?)?";
   const areaCode = "(\\([\\d]{3}\\)|[\\d]{3})";
   const spaces = "[\\s\\-]?";
   const phoneCode = "[\\d]{3}([\\s\\-]?)[\\d]{4}$";

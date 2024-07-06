@@ -1,7 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
+  font-family: "Kumbh Sans", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: aliceblue;
 }
 
 .container {
@@ -34,19 +41,22 @@
   width: 250px;
   padding: 5px;
   margin: 5px;
-  border: 2px solid black;
+  border: 2px solid rgb(40, 89, 235);
   border-radius: 10px;
+  box-shadow: 5px 5px 2.5px rgb(40, 89, 235);
 }
 
 .main-heading {
   padding: 40px 10px;
   text-align: center;
+  font-size: 40px;
+  font-weight: 500;
 }
 
 label {
-  font-size: 25px;
-  padding: 10px;
-  color: black;
+  font-size: 23px;
+  padding: 1px;
+  color: rgb(40, 89, 235);
 }
 
 #user-input {
@@ -61,4 +71,7 @@ label {
   padding: 5px 15px;
   font-size: 20px;
   margin: 10px;
+  border-radius: 10px;
+  background-color: rgb(1, 1, 97);
+  color: white;
 }
