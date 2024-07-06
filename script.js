@@ -8,20 +8,22 @@ const checkValidNumber = (input) => {
     alert("Please provide a phone number");
     return;
   }
-  const countryCode = "(^1\\s?)?";
+  const countryCode = "^(1\\s)?";
   const areaCode = "(\\([\\d]{3}\\)|[\\d]{3})";
-  const spaces = "([\\s\\-])?";
-  const phoneCode = "[\\d]{3}[\\s\\-]?[\\d]{4}$";
+  const spaces = "[\\s\\-]?";
+  const phoneCode = "[\\d]{3}([\\s\\-]?)[\\d]{4}$";
   const phoneRegex = new RegExp(
     `${countryCode}${areaCode}${spaces}${phoneCode}`
   );
 
-  if (/*input.match(phoneRegex)*/ phoneRegex.test(input)) {
-    console.log("true");
-  } else {
-    console.log("false");
-  }
-  console.log(phoneRegex);
+  const pElement = document.createElement("p");
+  pElement.innerText = `${
+    phoneRegex.test(input) ? "Valid" : "Invalid"
+  } US  number: ${input}`;
+  pElement.className = "result-text";
+  pElement.style.fontSize = "26px";
+  pElement.style.textAlign = "center";
+  result.appendChild(pElement);
 };
 
 checkBtn.addEventListener("click", () => {
